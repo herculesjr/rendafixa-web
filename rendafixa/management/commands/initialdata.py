@@ -38,7 +38,7 @@ class Command(BaseCommand):
                                        name=boundtype_name,
                                        description=boundtype_description)
                 bound_type.save()
-            for year in range(2015, now.year+1):
+            for year in range(2002, now.year+1):
                 filename = self.getFile(bound_str, year)
                 self.parse_file(filename, bound_type)
                 print '-----------------------------------'

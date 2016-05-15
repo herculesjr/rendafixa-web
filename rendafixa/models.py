@@ -10,10 +10,10 @@ from django.utils.encoding import python_2_unicode_compatible
 class Issuer(models.Model):
     name = models.CharField(max_length=200)
     identifier = models.CharField(max_length=100, unique=True)
-    last_update = models.DateTimeField(auto_now=True)
+    last_update = models.DateTimeField()
 
     def __str__(self):
-        return self.name
+        return '%s - %s' % (self.name, self.last_update)
 
 
 @python_2_unicode_compatible
