@@ -1,3 +1,8 @@
 from django.contrib import admin
 
-# Register your models here.
+from models import Issuer, BoundType, Bound, BoundData
+
+admin.site.register(Issuer)
+admin.site.register(BoundType)
+admin.site.register(Bound)
+admin.site.register(BoundData)
